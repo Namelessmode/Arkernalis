@@ -21,7 +21,7 @@ Clone the repository to your configuration directory:
 cp -r ~/.config/fastfetch ~/.config/fastfetch.backup && cp -r ~/.config/fish ~/.config/fish.backup
 ```
 # Usage
-- fastfish
+- fastfetch
 
 Move the following fastfetch config to the destined directory:
 
