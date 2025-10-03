@@ -25,7 +25,6 @@
         { "key": "│ ├ 󰓡 swap  │", "type": "swap" },
         { "key": "│ ├  disp  │", "type": "monitor", "format": "{1} px @ {2} Hz - {3} mm ({4} inches, {5} pp)" },
         { "key": "│ └  dtime │", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days" },
-
         { "key": "│  colors  │", "type": "colors", "symbol": "circle" },
         { "key": "╰───────────╯", "type": "custom" }
     ]
