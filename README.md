@@ -1,6 +1,6 @@
 # Overview
 A lightweight ASCII art, terminal greetings, polished-personalized configuration bundle for **fastfetch** and **fish shell**.
-<p allign="center">
+<p align="center">
  <img src="./Screenshots/FastFish.png" style="width: 100%;">
 </p>
 
@@ -35,7 +35,7 @@ Or use symlink to avoid overwriting existing configs
 ln -s ~/.config/FastFish/fastfetch ~/.config/fastfetch
 ```
 Preview
-<p allign="center">
+<p align="center">
  <img src="./Screenshots/FastFetch.png" style="width: 100%;">
 </p>
 
@@ -64,7 +64,7 @@ After moving or symlinking the configuration file to the destination (~/.config/
 source ~/.config/fish/functions/fish_greeting.fish
 ```
 Preview
-<p allign="center">
+<p align="center">
  <img src="./Screenshots/fish.png" style="width: 100%;">
 </p>
 
