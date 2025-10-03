@@ -1,4 +1,4 @@
 function fish_greeting
     clear
-    fastfetch --config ~/.config/fastfetch/$USERjsonc
+    fastfetch --config ~/.config/fastfetch/$USER.jsonc
 end
