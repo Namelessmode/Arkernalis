@@ -11,12 +11,12 @@ A lightweight ASCII art, terminal greetings, polished-personalized configuration
 - [ImageMagick](https://github.com/ImageMagick/ImageMagick) (for ```.png``` image display - Mendatory)
 
 # Installation
-Clone the repository to your configuration directory:
+Clone this repository to your configuration directory:
 
 ```
  git clone https://github.com/Namelessmode/FastFish.git ~/.config/FastFish
 ```
-> Note: If you have your own configs for fish or fastfetch, make sure to either delete or back things up before cloning.
+> Note: If you have your own configuration for fish or fastfetch, make sure to either delete or back things up before cloning.
 ```
 cp -r ~/.config/fastfetch ~/.config/fastfetch.backup && cp -r ~/.config/fish ~/.config/fish.backup
 ```
@@ -34,6 +34,8 @@ Or use symlink to avoid overwriting existing configs
 #Symlink
 ln -s ~/.config/FastFish/fastfetch ~/.config/fastfetch
 ```
+> Important: Do not move copy/move/symlink ```~/.config/FastFish/fastfetch``` to fastfetch directory itself. Copy/Move/Symlink them outside the fastfetch directory, ```~/.config/FastFish/fastfetch``` > ```~/.config/``` to overwrite the fastfetch directory. This condition only applies if fastfetch directory exists inside ```~/.config/``` and it is free to run the command above if it doesn't exist.
+
 Preview
 <p align="center">
  <img src="./Screenshots/FastFetch.png" style="width: 100%;">
@@ -57,8 +59,25 @@ mv ~/.config/FastFish/fish ~/.config/fish
 #Symlink
 ln -s ~/.config/FastFish/fish ~/.config/fish
 ```
+> Important!: Do not move/copy/symlink ```~/.config/FastFish/fish``` to fish directory itself```~/.config/fish/```. Copy/Move/Symlink them outside the fish directory, ```~/.config/FastFish/fish``` > ```~/.config/``` to overwrite the fish directory. This condition only applies if fish directory exists inside ```~/.config/``` and it is free to run the command above if it doesn't exist.
 
-After moving or symlinking the configuration file to the destination (~/.config/fish/), activate the greeting function:
+After moving or symlinking the configuration file to the destination (~/.config/fish/), go back to ```~/.config/fastfetch/``` and rename ```USER.jsonc``` to your username. (Example, ```Andy.jsonc``` or ```configs.jsonc```.)
+```
+#For nano
+nano ~/.config/fastfetch/USER.jsonc
+```
+```
+#For VIM
+vim ~/.config/fastfetch/USER.jsonc
+```
+```
+#FOR NVIM
+nvim ~/.config/fastfetch/USER.jsonc
+```
+Write the following ```USER.jsonc``` with your Arch username by following the command ```:wq! YOUR_USERNAME.jsonc``` -> ```Enter``` for NVIM/VIM. 
+For nano, write with ```Ctrl + O``` -> ```Write to File: YOUR_USERNAME.jsonc``` -> ```ENTER``` -> ```Save file under Different Name?: Y``` -> ```Ctrl + X```.
+
+Then, Activate the greeting function:
 
 ```
 source ~/.config/fish/functions/fish_greeting.fish
@@ -67,6 +86,32 @@ Preview
 <p align="center">
  <img src="./Screenshots/fish.png" style="width: 100%;">
 </p>
+
+As easy as that, we're done!!
+# Troubleshoot
+If fish throws error code:
+Navigate to ```~/.config/fish/functions/``` and use an editor to edit ```fish_greeting.fish```
+Open VIM/NVIM/Nano:
+```
+# For Nano
+nano ~/.config/fish/functions/fish_greeting.fish
+```
+```
+# For VIM
+vim ~/.config/fish/functions/fish_greeting.fish
+```
+```
+For NVIM
+nvim ~/.config/fish/functions/fish_greeting.fish
+```
+
+Replace ```$USER.jsonc``` with your ```$USER``` (Ex. ```USER``` can be ```Andy```) and hit ```ESC```, ```:wq!``` for VIM/NVIM. For nano, hit 'Ctrl + O -> Enter -> Ctrl + X -> Enter' to exit and save.
+> Important!: You must put the exact Username as your Arch Linux Username (Not Hostname). Mismatch might cause errors
+
+Then run the activating greet function:
+```
+source ~/.config/fish/functions/fish_greeting.fish
+```
 
 # Credit
 Inspiration and references taken from:
