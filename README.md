@@ -1,40 +1,76 @@
-# FastFish
-<img width="4096" height="2304" alt="Screenshot_2025-10-03_19 02 05" src="https://github.com/user-attachments/assets/b2b29fc4-b872-402d-8444-793e4c78fd38" />
+# Overview
+A lightweight ASCII art, terminal greetings, polished-personalized configuration bundle for **fastfetch** and **fish shell**.
+<p allign="center">
+ <img src="./Screenshots/FastFish.png" style="width: 100%;">
+</p>
 
-<a id="installation"></a>  
-<img src="https://github.com/user-attachments/assets/7e1e2fa0-ab50-4901-a024-fe731fb44ab3" width="200"/>
----
+# Dependencies
+**Before cloning the git repository, make sure to have the following dependencies installed on the system.**
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- [fish shell](https://github.com/fish-shell/fish-shell)
+- [ImageMagick](https://github.com/ImageMagick/ImageMagick) (for ```.png``` image display - Mendatory)
+
+# Installation
+Clone the repository to your configuration directory:
 
 ```
  git clone https://github.com/Namelessmode/FastFish.git ~/.config/FastFish
 ```
-# FastFetch config
+> Note: If you have your own configs for fish or fastfetch, make sure to either delete or back things up before cloning.
+```
+cp -r ~/.config/fastfetch ~/.config/fastfetch.backup && cp -r ~/.config/fish ~/.config/fish.backup
+```
+# Usage
+- fastfish
+
 Move the following fastfetch config to the destined directory:
 
 ```
+#Move
 mv ~/.config/FastFish/fastfetch ~/.config/fastfetch
 ```
-<img width="2084" height="1784" alt="FastFetch" src="https://github.com/user-attachments/assets/fdccfd8c-940a-4aa4-8ef6-fc2698dfbc00" />
+Or use symlink to avoid overwriting existing configs
+```
+#Symlink
+ln -s ~/.config/FastFish/fastfetch ~/.config/fastfetch
+```
+Preview
+<p allign="center">
+ <img src="./Screenshots/FastFetch.png" style="width: 100%;">
+</p>
 
  > _To display images in `*.png` format, set_:
 
 ```
 sudo pacman -Syu imagemagick
 ```
-# Fish config
-Move the following fish config to the destined directory:
+
+---
+- fish
+
+Move or Symlink the following fish config to the destined directory:
 ```
+#Move
 mv ~/.config/FastFish/fish ~/.config/fish
 ```
-After moving the configuration file to the destination (~/.config/fish/), activate it with ```source``` cmd.
+```
+#Symlink
+ln -s ~/.config/FastFish/fish ~/.config/fish
+```
+
+After moving or symlinking the configuration file to the destination (~/.config/fish/), activate the greeting function:
 
 ```
 source ~/.config/fish/functions/fish_greeting.fish
 ```
-<img width="1967" height="1094" alt="fish" src="https://github.com/user-attachments/assets/ac9535df-aeff-4666-93d1-df48cc34cf0c" />
+Preview
+<p allign="center">
+ <img src="./Screenshots/fish.png" style="width: 100%;">
+</p>
 
 # Credit
-Inspiration taken from:
-- mylinux4work/dotfiles
-- HyDE-Project/HyDE
-- LierB/fastfetch
+Inspiration and references taken from:
+- [mylinux4work/dotfiles](https://github.com/mylinuxforwork/dotfiles)
+- [HyDE-Project/HyDE](https://github.com/HyDE-Project/HyDE)
+- [LierB/fastfetch](https://github.com/LierB/fastfetch)
+- [sofijacom/dotfiles-fastfetch](https://github.com/sofijacom/dotfiles-fastfetch)
