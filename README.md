@@ -34,7 +34,7 @@ Or use symlink to avoid overwriting existing configs
 #Symlink
 ln -s ~/.config/Arkernalis/fastfetch ~/.config/fastfetch
 ```
-> Important: Do not move copy/move/symlink ```~/.config/Arkernalis/fastfetch``` to fastfetch directory itself. Copy/Move/Symlink them outside the fastfetch directory, ```~/.config/Arkernalis/fastfetch``` > ```~/.config/``` to overwrite the fastfetch directory. This condition only applies if fastfetch directory exists inside ```~/.config/``` and it is free to run the command above if it doesn't exist.
+> Important: **Do not move copy/move/symlink ```~/.config/Arkernalis/fastfetch``` to fastfetch directory itself**. Copy/Move/Symlink them outside the fastfetch directory, ```~/.config/Arkernalis/fastfetch``` > ```~/.config/``` to overwrite the fastfetch directory. This condition only applies if fastfetch directory exists inside ```~/.config/``` and it is free to run the command above if it doesn't exist.
 
 Preview
 <p align="center">
@@ -44,10 +44,17 @@ Preview
  > _To display images in `*.png` format, set_:
 
 ```
+#For Arch
 sudo pacman -Syu imagemagick
 ```
-
----
+```
+#For Ubutnu/Debian
+sudo apt install imagemagick
+```
+```
+#For Fedora
+sudo dnf install imagemagick
+```
 - fish
 
 Move or Symlink the following fish config to the destined directory:
@@ -59,7 +66,7 @@ mv ~/.config/Arkernalis/fish ~/.config/fish
 #Symlink
 ln -s ~/.config/Arkernalis/fish ~/.config/fish
 ```
-> Important!: Do not move/copy/symlink ```~/.config/Arkernalis/fish``` to fish directory itself```~/.config/fish/```. Copy/Move/Symlink them outside the fish directory, ```~/.config/Arkernalis/fish``` > ```~/.config/``` to overwrite the fish directory. This condition only applies if fish directory exists inside ```~/.config/``` and it is free to run the command above if it doesn't exist.
+> Important!: **Do not move/copy/symlink ```~/.config/Arkernalis/fish``` to fish directory itself```~/.config/fish/```.** Copy/Move/Symlink them outside the fish directory, ```~/.config/Arkernalis/fish``` > ```~/.config/``` to overwrite the fish directory. This condition only applies if fish directory exists inside ```~/.config/``` and it is free to run the command above if it doesn't exist.
 
 After moving or symlinking the configuration file to the destination (~/.config/fish/), go back to ```~/.config/fastfetch/``` and rename ```USER.jsonc``` to your username. (Example, ```Andy.jsonc``` or ```configs.jsonc```.)
 ```
@@ -74,7 +81,7 @@ vim ~/.config/fastfetch/USER.jsonc
 #FOR NVIM
 nvim ~/.config/fastfetch/USER.jsonc
 ```
-Write the following ```USER.jsonc``` with your Arch username by following the command ```:wq! YOUR_USERNAME.jsonc``` -> ```Enter``` for NVIM/VIM. 
+Write the following ```USER.jsonc``` with your local-distribution username by following the command ```:wq! YOUR_USERNAME.jsonc``` -> ```Enter``` for NVIM/VIM. 
 For nano, write with ```Ctrl + O``` -> ```Write to File: YOUR_USERNAME.jsonc``` -> ```ENTER``` -> ```Save file under Different Name?: Y``` -> ```Ctrl + X```.
 
 Then, Activate the greeting function:
@@ -106,7 +113,7 @@ nvim ~/.config/fish/functions/fish_greeting.fish
 ```
 
 Replace ```$USER.jsonc``` with your ```$USER``` (Ex. ```USER``` can be ```Andy```) and hit ```ESC```, ```:wq!``` for VIM/NVIM. For nano, hit 'Ctrl + O -> Enter -> Ctrl + X -> Enter' to exit and save.
-> Important!: You must put the exact Username as your Arch Linux Username (Not Hostname). Mismatch might cause errors
+> Important!: You must put the exact Username as your Distribution Username (Not Hostname). Mismatch might cause errors
 
 Then run the activating greet function:
 ```
