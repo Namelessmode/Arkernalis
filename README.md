@@ -8,7 +8,7 @@ A lightweight ASCII art, terminal greetings, polished-personalized configuration
 **Before cloning the git repository, make sure to have the following dependencies installed on the system.**
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [fish shell](https://github.com/fish-shell/fish-shell)
-- [ImageMagick](https://github.com/ImageMagick/ImageMagick) (for ```.png``` image display - Mendatory)
+- [ImageMagick](https://github.com/ImageMagick/ImageMagick) (for ```.png``` image display -Mandatory)
 
 # Installation
 Clone this repository to your configuration directory:
